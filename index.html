@@ -27,13 +27,11 @@
           <li><i class="ri-home-4-line"></i> <a href="#Home"> Home</a></li>
           <li><i class="ri-code-s-fill"></i> <a href="#Skills"> Skills</a></li>
           <li>
-            <i class="ri-lightbulb-line"></i> <a href="#Projects"> my work</a>
+            <i class="ri-lightbulb-line"></i> <a href="#Projects"> My works</a>
           </li>
-
-          <li>
-            <i class="ri-information-line"></i> <a href="#About"> About</a>
+          <li class="contact">
+            <i class="ri-phone-line"></i><a href="#contact"> Contact</a>
           </li>
-          <li><i class="ri-phone-line"></i><a href="#contact"> contact</a></li>
         </ul>
       </nav>
       <div id="content">
@@ -43,9 +41,10 @@
           <h2 class="text-changer">A Web developer</h2>
 
           <div id="social-Icons">
-            <i class="ri-github-line"> <a href="#">Github</a></i>
-            <i class="ri-linkedin-box-fill"> <a href="#">LinkedIn</a></i>
-            <i class="ri-whatsapp-fill"> <a href="#">Whatsapp</a></i>
+            <i class="ri-github-line" class="github"> <a href="#">Github</a></i>
+            <i class="ri-linkedin-box-fill" class="document">
+              <a href="#" target="_blank">View Document</a></i
+            >
           </div>
         </div>
         <div id="content-right">
@@ -98,6 +97,18 @@
 
       <section id="Projects">
         <h1>My Works</h1>
+        <div id="project-cards">
+          <div id="card">
+            <div id="card-img">
+              <img src="./public/remixicon-com-.jpg" alt="website-image" />
+              <i class="ri-arrow-right-up-line"></i>
+            </div>
+            <div id="card-content">
+              <h2>title</h2>
+              <h4>summary</h4>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="About">
@@ -121,7 +132,16 @@
             <img src="./public/Animation - 1711803751821.gif" alt="" />
           </div>
         </div>
-        <input type="file" name="" id="" />
+        <form method="post">
+          <input
+            type="email"
+            name="email"
+            id=""
+            placeholder="eg. work@company.com"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
       </section>
 
       <footer>2023-24 Copyright ©.</footer>
@@ -129,6 +149,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
-    <script src="/main.js"></script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
