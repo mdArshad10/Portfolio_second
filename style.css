@@ -110,9 +110,10 @@ a:hover{
 
 #skill-icons-container{
   display: grid;
-  margin: 1rem 2rem;
+  margin: 2rem 6rem;
   /* outline: 2px solid red; */
-  gap: 1rem ;
+  row-gap: 3rem;
+  column-gap: 1rem;
 
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2,1fr);
@@ -126,7 +127,7 @@ display: flex;
 }
 
 #skill-content > img{
-  width: 80%;
+  width: 40%;
   cursor: pointer;
   transition: all ease-in-out 0.4s;
 }
@@ -180,12 +181,12 @@ display: flex;
 
 #contact-heading{
   display: flex;
-
+  height: 3rem;
 }
 
 #chai-icon > img{
-  width: 100%;
-  height: 100%;
+  width: 8%;
+  height: 8%;
   object-fit: cover;
 }
 
@@ -198,8 +199,15 @@ display: flex;
   }
 }
 
-#chai-icon{
-  
+.portfolio-btn{
+  padding: 1rem 3rem !important;
+  background-color: aqua;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.portfolio-btn:hover{
+  border: none;
 }
 
 footer{
