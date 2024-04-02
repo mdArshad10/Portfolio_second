@@ -24,6 +24,23 @@ li{
   list-style: none;
 }
 
+
+/* .lora-<uniquifier> {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+/* .inter-<uniquifier> {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+} */
+
 nav{
   background-color: aqua;
   display: flex;
@@ -152,16 +169,24 @@ display: flex;
 }
 
 #project-cards{
-
-  
+display: grid;
+row-gap: 1rem;
+column-gap: 2rem;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(2, 1fr);
 }
 
 #card{
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  outline: 2px solid;
+  overflow: hidden;
+  
+  background-color: aqua;
 
   &>#card-img{
-    width: 20%;
+    
     border-radius: 30px;
     transition: all ease-in-out 0.4s;
     cursor: pointer;
@@ -169,15 +194,17 @@ display: flex;
 
 
     &>img{
-      width: 100%;
+      width:100%;
       height: 100%;
       object-fit: cover; 
+      
     }
 
-    &>i{
+    &>a>i{
       position: absolute;
+      font-size: 30px;
       bottom: 0;
-      
+      right: 2%;
     }
   }
 }
@@ -221,6 +248,30 @@ display: flex;
 #contact-heading{
   display: flex;
   height: 3rem;
+}
+
+#card-content > h2{
+  /* font-size: 20px; */
+  text-align: start;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  text-transform: capitalize;
+}
+
+#card-content>h4{
+  text-align: start;
+  font-weight: 300;
+  padding-left: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+
+#card-content>a{
+  padding: 1rem;
+  display: block;
+  cursor: pointer;
+  background-color: bisque;
+  width: 100%;
 }
 
 #chai-icon > img{
