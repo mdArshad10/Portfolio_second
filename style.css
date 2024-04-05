@@ -1,7 +1,16 @@
 :root{
-  --bg-color:"black"
+  
   --heading: 36px;
+  --bg-color:white;
+  /* with white background */
+  --color-primary:#03045E;
+  --color-secondary:#023E8A;
+  --color-tertiary:#0077B6;
 
+  /* with black background */
+  --color-fourier:#0096C7;
+  --color-fifty:#00B4D8;
+  --color-sixty:#48CAE4;
 }
 
 *{
@@ -13,11 +22,14 @@
 html, body{
   width: 100%;
   height: 100%;
+  background-color: var(--bg-color);
+  font-family: Inter, Lora;
 }
 
 
 a, a:active, a:visited{
   text-decoration: none;
+  color: black;
 }
 
 li{
@@ -42,12 +54,12 @@ li{
 } */
 
 nav{
-  background-color: aqua;
+  
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  padding: 1rem 5rem;
 }
 
 ul>li{
@@ -55,8 +67,13 @@ ul>li{
 }
 
 .contact{
-  background-color: blue;
+  background-color: #023E8A;
   border-radius: 5px;
+  color: #fff;
+
+  &>a{
+    color: white;
+  }
 }
 
 #loader{
@@ -66,7 +83,7 @@ ul>li{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  /* background-color: black; */
 }
 
 
@@ -92,25 +109,43 @@ a:hover{
 }
 
 #content{
-  padding:11rem 4rem;
+  padding:6rem 5rem;
   outline: 2px solid yellow;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   display: flex;
 }
 
 
 
 #content-left{
-  /* background-color: bisque; */
-  flex: 1 1 100%;
-  /* outline: 2px solid red; */
+  flex: 1 1 80%;
+
+  & > #content-links{
+    margin-top: 10px;
+    
+    & > i{
+      padding: 0.4rem 0.8rem;
+      margin-right: 10px;
+    }
+
+    & > .ri-linkedin-box-fill{
+      background-color: var(--color-tertiary);
+      color: #fff;
+      border-radius: 2px;
+
+      &> a{
+        color: white;
+      }
+    }
+  }
 }
 
+
 #content-right{
-  /* outline: 2px solid burlywood; */
+  
   display: flex;
   justify-content: center;
-  width: 100%;
+  flex: 1 1 75%;
 }
 
 .text-changer{
@@ -129,7 +164,7 @@ a:hover{
   padding: 2rem;
   text-align: center;
   font-size: 65px;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   margin-bottom: 3rem;
 }
 
@@ -163,7 +198,7 @@ display: flex;
 
 #Projects{
   margin-top: 3rem;
-  background-color: burlywood;
+  /* background-color: burlywood; */
   padding: 3rem 1rem;
   text-align: center;
 }
@@ -172,7 +207,7 @@ display: flex;
 display: grid;
 row-gap: 1rem;
 column-gap: 2rem;
-grid-template-columns: repeat(4, 1fr);
+grid-template-columns: repeat(3, 1fr);
 grid-template-rows: repeat(2, 1fr);
 }
 
@@ -183,7 +218,7 @@ grid-template-rows: repeat(2, 1fr);
   outline: 2px solid;
   overflow: hidden;
   
-  background-color: aqua;
+  /* background-color: aqua; */
 
   &>#card-img{
     
@@ -222,14 +257,14 @@ grid-template-rows: repeat(2, 1fr);
   font-size: 65px;
   text-align: center;
   text-transform: uppercase;
-  background-color: thistle;
+  /* background-color: thistle; */
   padding: 4rem 1rem;
 }
 
 #contents{
   padding: 1rem 4rem;
   text-align: center;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 #contents>p{
@@ -241,13 +276,32 @@ grid-template-rows: repeat(2, 1fr);
 #contact{
   padding: 4rem 3rem;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-start;
+  
 }
 
 #contact-heading{
   display: flex;
-  height: 3rem;
+  flex-direction: column;
+    flex: 1 1 60%;
+    align-items: flex-start;
+
+    &> #socialIcons{
+      display: flex;
+    flex-direction: column;
+    }
+    
+    & > h1{
+      font-size: 52px;
+    }
+}
+
+
+#contactForm{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 40%;
+  gap: 0.5rem;
 }
 
 #card-content > h2{
@@ -270,7 +324,7 @@ grid-template-rows: repeat(2, 1fr);
   padding: 1rem;
   display: block;
   cursor: pointer;
-  background-color: bisque;
+  /* background-color: bisque; */
   width: 100%;
 }
 
@@ -280,18 +334,11 @@ grid-template-rows: repeat(2, 1fr);
   object-fit: cover;
 }
 
-#contact-heading{
-  display: flex;
-  align-items: center;
-
-  & > h1{
-    font-size: 52px;
-  }
-}
 
 
 
-#contact>form{
+
+/* #contact>form{
   width: 100%;
   display: flex;
   justify-content: center;
@@ -320,7 +367,7 @@ grid-template-rows: repeat(2, 1fr);
     color: white;
     cursor: pointer;
   }
-}
+} */
 
 
 

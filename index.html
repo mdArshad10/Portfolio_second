@@ -51,9 +51,9 @@
           <h2>I am Md.Arshad</h2>
           <h2 class="text-changer"></h2>
 
-          <div id="social-Icons">
+          <div id="content-links">
             <i class="ri-github-line" class="github"> <a href="#">Github</a></i>
-            <i class="ri-linkedin-box-fill" class="document">
+            <i class="ri-linkedin-box-fill">
               <a href="#" target="_blank">View Document</a></i
             >
           </div>
@@ -162,21 +162,33 @@
 
       <section id="contact">
         <div id="contact-heading">
-          <h1>Let's have Chai</h1>
-          <div id="chai-icon">
-            <img src="./public/tea.gif" alt="" />
+          <h1>
+            Let's discuss on Something <span id="cool">Cool</span> together
+          </h1>
+
+          <div id="socialIcons">
+            <i class="ri-whatsapp-line"
+              ><a href="tel:9163350082">Whatsapp</a></i
+            >
+            <i class="ri-github-line" class="github"> <a href="#">Github</a></i>
+            <i class="ri-linkedin-box-fill" class="document">
+              <a href="#" target="_blank">View Document</a></i
+            >
           </div>
         </div>
 
-        <form method="post">
-          <input
-            type="email"
-            name="email"
+        <form action="" id="contactForm">
+          <h3>waiting for your message</h3>
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" id="" placeholder="Email" />
+          <textarea
+            name="message"
             id=""
-            placeholder="eg. work@company.com"
-            required
-          />
-          <button type="submit">Subscribe</button>
+            cols="30"
+            rows="10"
+            placeholder="Message..."
+          ></textarea>
+          <button>Submit</button>
         </form>
       </section>
 
