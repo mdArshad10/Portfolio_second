@@ -9,13 +9,13 @@ var typewriter = new Typewriter(app, {
 
 typewriter
   .pauseFor(1500)
-  .typeString("software engineer")
+  .typeString("A Software engineer")
   .pauseFor(1000)
   .deleteAll()
   .typeString("A Web Developer")
   .pauseFor(1000)
   .deleteAll()
-  .typeString("Problem solver")
+  .typeString("A Problem solver")
   .pauseFor(1000)
   .deleteAll()
   .typeString("A fast learner")
