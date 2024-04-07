@@ -105,6 +105,7 @@ a:hover {
 
   & > #content-links {
     margin-top: 1.5rem;
+    
 
     & > i {
       padding: 1rem 2rem;
@@ -301,7 +302,6 @@ a:hover {
   & > textarea,
   & > button {
     width: 100%;
-    
   }
 
   & > input,
@@ -359,40 +359,50 @@ a:hover {
   object-fit: cover;
 }
 
-/* #contact>form{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-
-
-  &> input{
-    width: 50%;
-    padding: .5rem;
-    margin: .5rem 0;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid;
-    font-size: 1rem;
-  }
-
-  &>button{
-    width: 16%;
-    padding: .75rem;
-    margin: .5rem 0;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid;
-    font-size: 1rem;
-    background-color: blue;
-    color: white;
-    cursor: pointer;
-  }
-} */
-
 footer {
   padding: 10px;
   background-color: black;
   color: #fff;
   text-align: center;
+}
+
+/* ====== responsive media ======== */
+
+@media screen and (min-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+  #content{
+    flex-direction: column-reverse;
+
+    &> #content-left{
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  #content-links{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 50%;
+  }
+  #project-cards {
+    display: grid;
+    align-items: center;
+    grid-template-rows: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  #contact{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 600px) {
 }
