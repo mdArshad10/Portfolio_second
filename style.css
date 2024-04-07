@@ -266,12 +266,13 @@ a:hover {
   padding: 4rem 5rem;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 #contact-heading {
   display: flex;
   flex-direction: column;
-  flex: 1 1 60%;
+  width: 60%;
   align-items: flex-start;
 
   & > #socialIcons {
@@ -293,15 +294,14 @@ a:hover {
 #contactForm {
   display: flex;
   flex-direction: column;
-  flex: 1 1 40%;
   gap: 0.5rem;
 
   & > input,
   & > h3,
   & > textarea,
   & > button {
-    width: 60%;
-    margin-left: auto;
+    width: 100%;
+    
   }
 
   & > input,
@@ -315,7 +315,6 @@ a:hover {
     }
   }
   & > textarea {
-    width: 60%;
     height: 6rem;
   }
 
