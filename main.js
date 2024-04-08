@@ -36,12 +36,31 @@ function pageLoader() {
   });
 
   tl.to("#loader", {
-    y:"-100vh",
+    y: "-100vh",
     duration: 2,
+    zIndex: 0,
   });
 }
 
-function textChanger() {
+function textRevelEffect() {
+  const paragraphs = document.querySelector(".reveal-type");
+  console.log(paragraphs);
+    const text = new SplitType(paragraphs, { type: "chars" });
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: ".char",
+        start: "top 80%",
+        end: "top 20%",
+        markers: true,
+        scrub: 3,
+      },
+      opacity: 0.2,
+      stagger: 0.1,
+    });
+  
+}
+
+function descriptionChanges() {
   let app = document.querySelector(".text-changer");
 
   var typewriter = new Typewriter(app, {
@@ -66,5 +85,6 @@ function textChanger() {
 }
 
 pageLoader();
+textRevelEffect();
 
-textChanger();
+descriptionChanges();
