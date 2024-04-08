@@ -68,10 +68,20 @@ ul > li {
   position: absolute;
   height: 100vh;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: black; */
+  display: grid;
+  place-content: center;
+  background-color: black;
+
+  & > p {
+    font-size: 3rem;
+    text-align: center;
+    margin: 0;
+    line-height: 0;
+    color: white;
+    -webkit-text-stroke: 1px white;
+
+    color: transparent;
+  }
 }
 
 #logo {
@@ -95,8 +105,14 @@ a:hover {
   border-bottom: 1px solid;
 }
 
+.website-paddings {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 #content {
-  padding: 6rem 5rem;
+  /* padding: 6rem 5rem; */
+  padding: 6rem 8%;
   display: flex;
 }
 
@@ -105,7 +121,6 @@ a:hover {
 
   & > #content-links {
     margin-top: 1.5rem;
-    
 
     & > i {
       padding: 1rem 2rem;
@@ -372,17 +387,17 @@ footer {
 }
 
 @media (max-width: 992px) {
-  #content{
+  #content {
     flex-direction: column-reverse;
 
-    &> #content-left{
+    & > #content-left {
       margin-top: 1rem;
       display: flex;
       flex-direction: column;
       align-items: center;
     }
   }
-  #content-links{
+  #content-links {
     display: flex;
     flex-direction: column-reverse;
     gap: 10px;
@@ -395,7 +410,7 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
-  #contact{
+  #contact {
     flex-direction: column;
     align-items: center;
   }
