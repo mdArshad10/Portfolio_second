@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Typewriter from "typewriter-effect/dist/core";
 import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -43,21 +44,23 @@ function pageLoader() {
 }
 
 function textRevelEffect() {
-  const paragraphs = document.querySelector(".reveal-type");
-  console.log(paragraphs);
-    const text = new SplitType(paragraphs, { type: "chars" });
-    gsap.from(text.chars, {
-      scrollTrigger: {
-        trigger: ".char",
-        start: "top 80%",
-        end: "top 20%",
-        markers: true,
-        scrub: 3,
-      },
-      opacity: 0.2,
-      stagger: 0.1,
-    });
-  
+  // Split text into words and characters
+  const text = new SplitType(".reveal-type", { types: "words, chars" });
+
+  // Animate characters into view with a stagger effect
+  gsap.from(".char", {
+    scrollTrigger: {
+      
+      trigger: ".char",
+      start: "bottom 20%",
+      end: "top 20%",
+      markers: true,
+      scrub: 3,
+    },
+    opacity: 0.2,
+    stagger: 0.1,
+    stagger: { amount: 0.1 },
+  });
 }
 
 function descriptionChanges() {
