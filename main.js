@@ -50,16 +50,14 @@ function textRevelEffect() {
   // Animate characters into view with a stagger effect
   gsap.from(".char", {
     scrollTrigger: {
-      
       trigger: ".char",
       start: "bottom 20%",
-      end: "top 20%",
+      end: "top 80%",
       markers: true,
-      scrub: 3,
+      scrub: 4,
     },
     opacity: 0.2,
-    stagger: 0.1,
-    stagger: { amount: 0.1 },
+    stagger: 0.2,
   });
 }
 
