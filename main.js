@@ -53,7 +53,7 @@ function textRevelEffect() {
       trigger: ".char",
       start: "bottom 20%",
       end: "top 80%",
-      markers: true,
+      // markers: true,
       scrub: 4,
     },
     opacity: 0.2,
