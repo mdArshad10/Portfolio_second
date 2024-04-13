@@ -1,4 +1,4 @@
-import gsap from "gsap";
+import gsap from 'unpkg/gsap/dist/gsap.min.js';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Typewriter from "typewriter-effect/dist/core";
 import SplitType from "split-type";
