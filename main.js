@@ -1,5 +1,5 @@
 
-
+import {sendEmail} from './mailHandler'
 import Typewriter from "typewriter-effect/dist/core";
 import SplitType from "split-type";
 
@@ -85,7 +85,21 @@ function descriptionChanges() {
     .start();
 }
 
+
+const form = document.getElementById("contactForm");
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); 
+  const name = form[0].value;
+  const email = form[1].value;
+  const message = form[2].value;
+  
+  sendEmail({email, name, message})
+  
+});
+
+
 pageLoader();
 textRevelEffect();
 
 descriptionChanges();
+
