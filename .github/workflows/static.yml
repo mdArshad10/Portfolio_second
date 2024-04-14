@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Install Vite Globally (Optional)
+        run: npm install -g vite
       - name: Setup Nodejs
         uses: actions/setup-node@v3
         with:
