@@ -31,13 +31,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install Vite Globally (Optional)
-        run: npm install -g vite
+      
       - name: Setup Nodejs
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "npm"
+      - name: Install Dependencies
+        run: npm install
       - name: Build
         run: npm run build
       - name: Setup Pages
