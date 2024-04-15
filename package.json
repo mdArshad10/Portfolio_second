@@ -12,9 +12,12 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.10.1",
     "gsap": "^3.12.5",
     "remixicon": "^4.2.0",
+    "resend": "^3.2.0",
     "split-type": "^0.3.4",
+    "sweetalert": "^2.1.2",
     "typewriter-effect": "^2.21.0"
   }
 }
