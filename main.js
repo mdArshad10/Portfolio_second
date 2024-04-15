@@ -92,7 +92,7 @@ form.addEventListener("submit", (event) => {
   const message = form[2].value;
 
   console.log({ email, name, message });
-  sendEmail({ email, name, message });
+  // sendEmail({ email, name, message });
 });
 
 pageLoader();
