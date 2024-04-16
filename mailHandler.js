@@ -1,6 +1,5 @@
 export const sendMail = async ({ name, email, message }) => {
   try {
-    console.log("inside the send mail");
 
     const data = await emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,

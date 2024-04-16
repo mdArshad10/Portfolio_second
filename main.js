@@ -93,7 +93,7 @@ form.addEventListener("submit", async (event) => {
 
   (function () {
     emailjs.init({
-      publicKey: import.meta.evn.VITE_EMAILJS_PUBLIC_KEY,
+      publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
     });
   })();
 
