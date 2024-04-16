@@ -91,9 +91,14 @@ form.addEventListener("submit", async (event) => {
   const email = form[1].value;
   const message = form[2].value;
 
+  (function () {
+    emailjs.init({
+      publicKey: import.meta.evn.VITE_EMAILJS_PUBLIC_KEY,
+    });
+  })();
+
   console.log({ email, name, message });
   await sendMail({ email, name, message });
-  
 });
 
 pageLoader();

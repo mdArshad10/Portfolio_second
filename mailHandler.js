@@ -1,4 +1,3 @@
-
 export const sendMail = async ({ name, email, message }) => {
   try {
     console.log("inside the send mail");
