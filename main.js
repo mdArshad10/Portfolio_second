@@ -93,7 +93,7 @@ form.addEventListener("submit", async (event) => {
 
   console.log({ email, name, message });
   await sendMail({ email, name, message });
-  form.submit();
+  
 });
 
 pageLoader();
