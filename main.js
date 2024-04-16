@@ -1,4 +1,4 @@
-import { sendEmail } from "./mailHandler";
+import { sendMail } from "./mailHandler";
 import Typewriter from "typewriter-effect/dist/core";
 import SplitType from "split-type";
 
@@ -85,14 +85,15 @@ function descriptionChanges() {
 }
 
 const form = document.getElementById("contactForm");
-form.addEventListener("submit", (event) => {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const name = form[0].value;
   const email = form[1].value;
   const message = form[2].value;
 
   console.log({ email, name, message });
-  // sendEmail({ email, name, message });
+  await sendMail({ email, name, message });
+  form.submit();
 });
 
 pageLoader();
